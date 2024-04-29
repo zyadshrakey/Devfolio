@@ -1,0 +1,548 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --color-main: #0078ff;
+}
+
+/*               global                */
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.p-60 {
+  padding: 60px 16px;
+}
+
+/*                end  global               */
+/*                start    nav bar           */
+nav li {
+  position: relative;
+  margin-left: 20px;
+}
+nav li::before {
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+  width: 70%;
+  background-color: white;
+  transition: 0.5s;
+  opacity: 0;
+}
+nav li:hover::before {
+  opacity: 1;
+}
+
+body:not(body:has(:target)) li a[href="#home"],
+body:has(.home:target) li a[href="#home"],
+body:has(.about:target) li a[href="#about"],
+body:has(.services:target) li a[href="#services"],
+body:has(.work:target) li a[href="#work"],
+body:has(.blog:target) li a[href="#blog"],
+body:has(.contact:target) li a[href="#contact"] {
+  border-bottom: solid 3px white;
+  color: white;
+}
+
+.dropdown-item::before {
+  transform: rotate(-90deg);
+}
+.dropdown-item:hover {
+  color: var(--color-main) !important;
+}
+.dropdown-item {
+  transition: 0.5s;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block !important;
+  margin-top: 2px;
+  overflow: none;
+}
+.dropstart:hover > .dropdown-menu {
+  display: block !important;
+  top: 0;
+  right: 100%;
+}
+@media screen and (max-width: 992px) {
+  .offcanvas-end {
+    margin-top: 60px;
+    background-color: white;
+    height: 90vh;
+  }
+
+  .offcanvas-body a {
+    color: #555 !important;
+    border: none !important;
+    margin: 5px 0 -5px 20px;
+  }
+  .nav-link:hover {
+    color: var(--color-main) !important;
+  }
+}
+
+/*                end      nav bar           */
+/*                start    home   section    */
+.home {
+  background-image: url(../images/hero-bg.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home .home-text h1 {
+  font-size: 4.5rem;
+}
+.home .home-text p {
+  font-size: 3.5rem;
+  transform: translate(-8.75rem);
+}
+@media screen and (max-width: 768px) {
+  .home .home-text h1 {
+    font-size: 2.5rem;
+  }
+  .home .home-text p {
+    font-size: 1.5rem;
+    transform: translate(-10%);
+  }
+}
+.home .home-text p::after {
+  content: "";
+  position: absolute;
+  animation: typing 10s infinite;
+}
+@keyframes typing {
+  0% {
+    content: " D|";
+  }
+  1% {
+    content: " De|";
+  }
+  2% {
+    content: " Dev|";
+  }
+  3% {
+    content: " Deve|";
+  }
+  4% {
+    content: " Devel|";
+  }
+  5% {
+    content: " Develo|";
+  }
+  6% {
+    content: " Develop|";
+  }
+  7% {
+    content: " Develope|";
+  }
+  8% {
+    content: " Developer|";
+  }
+  10% {
+    content: " Developer|";
+  }
+  12% {
+    content: " Developer ";
+  }
+  14% {
+    content: " Developer";
+  }
+  16% {
+    content: " Developer|";
+  }
+  18% {
+    content: " Developer|";
+  }
+  20% {
+    content: " Developer";
+  }
+  22% {
+    content: " Developer";
+  }
+  24% {
+    content: " Developer|";
+  }
+  26% {
+    content: " Developer|";
+  }
+  28% {
+    content: " Develope|";
+  }
+  29% {
+    content: " Develop|";
+  }
+  30% {
+    content: " Develo|";
+  }
+  31% {
+    content: " Devel|";
+  }
+  32% {
+    content: " Deve|";
+  }
+  33% {
+    content: " Dev|";
+  }
+  34% {
+    content: " De|";
+  }
+  35% {
+    content: " D|";
+  }
+  36% {
+    content: " De|";
+  }
+  37% {
+    content: " Des|";
+  }
+  38% {
+    content: " Desi|";
+  }
+  39% {
+    content: " Desi|";
+  }
+  40% {
+    content: " Desig|";
+  }
+  41% {
+    content: " Design|";
+  }
+  42% {
+    content: " Designe|";
+  }
+  43% {
+    content: " Designer|";
+  }
+  45% {
+    content: " Designer|";
+  }
+  47% {
+    content: " Designer";
+  }
+  49% {
+    content: " Designer";
+  }
+  51% {
+    content: " Designer|";
+  }
+  53% {
+    content: " Designer|";
+  }
+  55% {
+    content: " Designer";
+  }
+  57% {
+    content: " Designer";
+  }
+  59% {
+    content: " Designer|";
+  }
+  61% {
+    content: " Designer|";
+  }
+  62% {
+    content: " Designe|";
+  }
+  63% {
+    content: " Design|";
+  }
+  64% {
+    content: " Design|";
+  }
+  65% {
+    content: " Desig|";
+  }
+  66% {
+    content: " Desi|";
+  }
+  67% {
+    content: " Des|";
+  }
+  68% {
+    content: " De|";
+  }
+  68% {
+    content: " D|";
+  }
+  69% {
+    content: " |";
+  }
+  70% {
+    content: " F|";
+  }
+  71% {
+    content: " Fr|";
+  }
+  72% {
+    content: " Free|";
+  }
+  73% {
+    content: " Freel|";
+  }
+  74% {
+    content: " Freela|";
+  }
+  75% {
+    content: " Freelan|";
+  }
+  76% {
+    content: " Freelanc|";
+  }
+  77% {
+    content: " Freelance|";
+  }
+  78% {
+    content: " Freelancer|";
+  }
+  80% {
+    content: " Freelancer|";
+  }
+  82% {
+    content: " Freelancer";
+  }
+  84% {
+    content: " Freelancer";
+  }
+  86% {
+    content: " Freelancer|";
+  }
+  88% {
+    content: " Freelancer|";
+  }
+  90% {
+    content: " Freelancer";
+  }
+  92% {
+    content: " Freelancer";
+  }
+  94% {
+    content: " Freelancer|";
+  }
+  95% {
+    content: " Freelanc|";
+  }
+  96% {
+    content: " Freela|";
+  }
+  97% {
+    content: " Freel|";
+  }
+  98% {
+    content: " Free|";
+  }
+  99% {
+    content: " Fr|";
+  }
+  100% {
+    content: " |";
+  }
+}
+/*                end        home       section        */
+/*                start      about      section        */
+.about h3::before {
+  content: "";
+  position: absolute;
+  width: 6rem;
+  height: 0.1875rem;
+  background-color: var(--color-main);
+  bottom: -1rem;
+}
+.progress {
+  --bs-progress-border-radius: none !important;
+  --bs-progress-bg: #cde1f8;
+}
+
+/*                end        about      section        */
+/*                start      services    section        */
+.services .hvr-srv::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: var(--color-main);
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.services .container-fluid span {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px var(--color-main);
+  display: block;
+  transition: 0.5s;
+}
+.services .row .col-md-4:hover .container-fluid span {
+  box-shadow: 0 0 0 10px #cde1f8;
+  background-color: var(--color-main);
+}
+.services .row .col-md-4:hover .container-fluid i {
+  color: white;
+}
+/*                end        services      section      */
+/*                start       cv         section      */
+.cv {
+  background-image: url(/images/counters-bg.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cv span {
+  height: 70px;
+  width: 70px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #cde1f8;
+  display: block;
+}
+/*                end            cv         section      */
+/*                start         work         section      */
+
+.work .porto::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: var(--color-main);
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.work .work-img:hover > .shadow .overflow-hidden .img-hover {
+  scale: 1.2;
+}
+
+.overflow-hidden .img-hover {
+  cursor: pointer;
+  transition: 0.8s;
+}
+.work .work-icon {
+  height: 35px;
+  width: 35px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--color-main);
+  display: block;
+  line-height: 1.55;
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.work p {
+  font-size: 0.9rem;
+}
+
+/*                end           work         section      */
+/*                start         slider        section      */
+.slider {
+  background-image: url(/images/overlay-bg.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.slider .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.slider .carousel-indicators img {
+  width: 30px;
+}
+/*                end           slider        section      */
+/*                start         blog          section      */
+.blog .blg::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: var(--color-main);
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.blog .card-bottom img {
+  width: 2rem;
+  border-radius: 50%;
+}
+.blog .card-title,
+.blog .card-bottom {
+  transition: 0.5s;
+}
+.blog .card-bottom:hover {
+  color: var(--color-main);
+  cursor: pointer;
+}
+
+.blog .card-title:hover {
+  color: var(--color-main);
+  cursor: pointer;
+}
+.blog .card-body button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  cursor: default;
+  font-size: 0.75rem;
+}
+/*                end           blog          section         */
+/*                end           contact          section      */
+.contact {
+  background-image: url(/images/overlay-bg.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+.contact .cont::after {
+  content: "";
+  position: absolute;
+  width: 6.5rem;
+  height: 0.2rem;
+  background-color: var(--color-main);
+  bottom: -1rem;
+  left: 0;
+}
+.contact form button {
+  background-color: var(--color-main);
+  border: 4px solid;
+  transition: 0.5s;
+}
+.contact form button:hover {
+  border: 4px solid #549cee;
+}
+.contact .contact-icon ul li {
+  height: 3rem;
+  width: 3rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.contact .contact-icon ul li:hover {
+  border-color: #549cee !important;
+  background-color: var(--color-main);
+  color: white;
+}
+.contact .footer {
+  box-shadow: 1px 1px 4px black;
+}
+/*                end           contact          section      */
