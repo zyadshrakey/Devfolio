@@ -392,7 +392,7 @@ body:has(.contact:target) li a[href="#contact"] {
 /*                end        services      section      */
 /*                start       cv         section      */
 .cv {
-  background-image: url(/images/counters-bg.jpg);
+  background-image: url(../images/counters-bg.jpg);
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -451,7 +451,7 @@ body:has(.contact:target) li a[href="#contact"] {
 /*                end           work         section      */
 /*                start         slider        section      */
 .slider {
-  background-image: url(/images/overlay-bg.jpg);
+  background-image: url(../images/overlay-bg.jpg);
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -507,7 +507,7 @@ body:has(.contact:target) li a[href="#contact"] {
 /*                end           blog          section         */
 /*                end           contact          section      */
 .contact {
-  background-image: url(/images/overlay-bg.jpg);
+  background-image: url(../images/overlay-bg.jpg);
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
